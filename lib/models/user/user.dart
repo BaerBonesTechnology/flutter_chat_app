@@ -1,3 +1,4 @@
+import 'package:equatable/equatable.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 ///freezed model for user should have a factory constructor to upload the user to firebase and a fromJson method to convert the json to a user object
@@ -6,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'user.g.dart';
 
 @JsonSerializable()
-class AppUser{
+class AppUser extends Equatable{
   final String id;
   final String? email;
   final String? name;
@@ -32,4 +33,17 @@ class AppUser{
   factory AppUser.fromJson(Map<String, dynamic> json) => _$AppUserFromJson(json);
 
   Map<String, dynamic> toJson() => _$AppUserToJson(this);
+
+  @override
+  List<Object?> get props => [
+    id,
+    email,
+    name,
+    profilePicture,
+    status,
+    lastSeen,
+    isOnline,
+    chats,
+    blockedUsers,
+  ];
 }

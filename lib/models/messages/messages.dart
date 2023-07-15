@@ -1,3 +1,5 @@
+import 'package:equatable/equatable.dart';
+
 import '../chat_room/chat_room.dart';
 import '../user/user.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -11,7 +13,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'messages.g.dart';
 
 @JsonSerializable()
-class ChatMessage {
+class ChatMessage extends Equatable{
   String id;
   AppUser sender;
   ChatRoom chatId;
@@ -33,4 +35,15 @@ class ChatMessage {
   factory ChatMessage.fromJson(Map<String, dynamic> json) => _$ChatMessageFromJson(json);
 
   Map<String, dynamic> toJson() => _$ChatMessageToJson(this);
+
+  @override
+  List<Object?> get props => [
+    id,
+    sender,
+    chatId,
+    type,
+    message,
+    time,
+    isRead,
+  ];
 }
