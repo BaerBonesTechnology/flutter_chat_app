@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "936704099054",
+    "firebase_url": "https://odevs-flutter-default-rtdb.firebaseio.com",
+    "project_id": "odevs-flutter",
+    "storage_bucket": "odevs-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936704099054:android:eda7d5c28a3eb7fc09a9ff",
+        "android_client_info": {
+          "package_name": "com.baerhousprojects.chat_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936704099054-p3jf1698hsvc5f060cclej6tmuisp3ha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfkfq3HLVfj9goV0kevXnqn891eHB3Cyw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936704099054-p3jf1698hsvc5f060cclej6tmuisp3ha.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "936704099054-59tu4bnhmcijn12820qg6jfrjgqkqt9s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.odevsRework"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936704099054:android:8b6fa7b45f489c8309a9ff",
+        "android_client_info": {
+          "package_name": "com.example.odevs_rework"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936704099054-p3jf1698hsvc5f060cclej6tmuisp3ha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfkfq3HLVfj9goV0kevXnqn891eHB3Cyw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936704099054-p3jf1698hsvc5f060cclej6tmuisp3ha.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "936704099054-59tu4bnhmcijn12820qg6jfrjgqkqt9s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.odevsRework"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
