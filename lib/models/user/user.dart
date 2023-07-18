@@ -17,8 +17,17 @@ class AppUser extends Equatable{
   final bool? isOnline;
   final List<String> chats;
   final List<String> blockedUsers;
+  final String? publicKey;
 
-  AppUser({
+  /* Quick note:
+    * user name will be 'name + id!' this allows for:
+    * 1. Specific user searching
+    * 2. Username flexibility
+    *
+    * Id will be a series of 4 random numbers static and unique to each user
+    *
+   */
+  const AppUser({
     required this.id,
     this.email,
     this.name,
@@ -28,6 +37,7 @@ class AppUser extends Equatable{
     this.isOnline,
     this.chats = const [],
     this.blockedUsers = const [],
+    this.publicKey,
   });
 
   factory AppUser.fromJson(Map<String, dynamic> json) => _$AppUserFromJson(json);
@@ -46,4 +56,30 @@ class AppUser extends Equatable{
     chats,
     blockedUsers,
   ];
+
+  AppUser copyWith({
+    String? id,
+    String? email,
+    String? name,
+    String? profilePicture,
+    String? status,
+    DateTime? lastSeen,
+    bool? isOnline,
+    List<String>? chats,
+    List<String>? blockedUsers,
+    String? publicKey,
+  }) {
+    return AppUser(
+      id: id ?? this.id,
+      email: email ?? this.email,
+      name: name ?? this.name,
+      profilePicture: profilePicture ?? this.profilePicture,
+      status: status ?? this.status,
+      lastSeen: lastSeen ?? this.lastSeen,
+      isOnline: isOnline ?? this.isOnline,
+      chats: chats ?? this.chats,
+      blockedUsers: blockedUsers ?? this.blockedUsers,
+      publicKey: publicKey ?? this.publicKey,
+    );
+  }
 }

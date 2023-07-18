@@ -46,4 +46,24 @@ class ChatMessage extends Equatable{
     time,
     isRead,
   ];
+
+  ChatMessage copyWith({
+    String? id,
+    AppUser? sender,
+    ChatRoom? chatId,
+    String? type,
+    String? message,
+    DateTime? time,
+    bool? isRead,
+  }) {
+    return ChatMessage(
+      id: id ?? this.id,
+      sender: sender ?? this.sender,
+      chatId: chatId ?? this.chatId,
+      type: type ?? this.type,
+      message: message ?? this.message,
+      time: time ?? this.time,
+      isRead: isRead ?? this.isRead,
+    );
+  }
 }

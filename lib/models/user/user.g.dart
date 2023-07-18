@@ -23,6 +23,7 @@ AppUser _$AppUserFromJson(Map<String, dynamic> json) => AppUser(
               ?.map((e) => e as String)
               .toList() ??
           const [],
+      publicKey: json['publicKey'] as String?,
     );
 
 Map<String, dynamic> _$AppUserToJson(AppUser instance) => <String, dynamic>{
@@ -35,4 +36,5 @@ Map<String, dynamic> _$AppUserToJson(AppUser instance) => <String, dynamic>{
       'isOnline': instance.isOnline,
       'chats': instance.chats,
       'blockedUsers': instance.blockedUsers,
+      'publicKey': instance.publicKey,
     };

@@ -49,3 +49,4 @@ class AuthenticationResetPasswordEvent extends AuthenticationEvent {
 /// User is deleting account
 class AuthenticationDeleteAccountEvent extends AuthenticationEvent {}
 
+class AuthenticationStarted extends AuthenticationEvent {}
